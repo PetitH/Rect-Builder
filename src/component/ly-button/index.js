@@ -1,5 +1,3 @@
 import LyButton from './ly-button'
 
-export {
-  LyButton
-}
+export default LyButton

@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { LyButton } from '../../component'
+
 import { changeTitle } from './module'
 
-require('/src/statics/css/index.css')
+import '../../statics/css/index.css'
 
 class homeView extends Component{
   constructor(props) {
@@ -13,9 +15,9 @@ class homeView extends Component{
   render() {
     let { pageTitle } = this.props
     return(
-      <div class="contain">
+      <div className="contain">
         <h1>{pageTitle}</h1>
-        <span onClick={this._changeTitle}>改变标题</span>
+       <LyButton text="改变标题"></LyButton>
       </div>
     )
   }
