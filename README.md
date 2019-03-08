@@ -2,10 +2,12 @@
 
 #### 项目介绍
  这是一个基于creat-react-app脚手架开发的快速构建架构
-#### 软件架构
+
+#### 软件架构使用技术
  1. axios
  2. react-router-dom
  3. redux
+ 4. scss
 
 
 #### 安装教程
