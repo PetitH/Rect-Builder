@@ -1,13 +1,12 @@
 import axios from 'axios'
-
-//服务器数据库地址
+// 源地址
 const host = 'http://localhost:2227/'
- 
+
 // 创建axios实例
-let fetch = axios.create({
-  baseURL: host,
-  timeout: 5000,
-  headers: {'Content-Type': 'application/json;charset=UTF-8'}
+const service = axios.create({
+ baseURL:host,
+ timeout: 5000, // 请求超时时间
+ headers: {'Content-Type': 'application/json;charset=UTF-8'}
 })
 
 // 请求拦截器(request)
@@ -24,4 +23,4 @@ axios.interceptors.response.use(it =>{
   return Promise.reject(error)
 })
 
-export default fetch
+export default service

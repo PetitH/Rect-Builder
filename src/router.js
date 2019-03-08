@@ -1,22 +1,26 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
-
-// home （首页）
+// Provider是react-redux两个核心工具之一，作用：将store传递到每个项目中的组件中
+import { Provider } from 'react-redux'
+// 引入创建好的store实例
+import store from '../src/store'
+// page
 import Home from '../src/view/home'
-// about (关于)
-import About from '../src/view/about'
 
 class Router extends Component {
   render() {
     return (
-      <main>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-        </Switch>
-      </main>
-    )
+      <div className="App">
+       <Provider store = {store}>
+          <main>
+            <Switch>
+              <Route path="/" exact component={Home}></Route>
+            </Switch>
+          </main>
+        </Provider>
+      </div>
+    );
   }
 }
 
-export default Router
+export default Router;
