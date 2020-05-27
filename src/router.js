@@ -5,7 +5,11 @@ import { Provider } from 'react-redux'
 // 引入创建好的store实例
 import store from '../src/store'
 // page
+// 首页
 import Home from '../src/view/home'
+// 详情页
+import Detial from '../src/view/test'
+
 
 class Router extends Component {
   render() {
@@ -15,6 +19,7 @@ class Router extends Component {
           <main>
             <Switch>
               <Route path="/" exact component={Home}></Route>
+              <Route path="/detail" component={Detial}></Route>
             </Switch>
           </main>
         </Provider>
