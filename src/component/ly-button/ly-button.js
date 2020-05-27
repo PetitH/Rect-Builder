@@ -7,7 +7,8 @@ import './ly-button.scss'
 
 class LyButton extends Component{
   static propTypes = {
-		text: PropTypes.string,
+    text: PropTypes.string,
+    changeTitle: PropTypes.func
   }
   
   constructor(props) {
@@ -15,9 +16,9 @@ class LyButton extends Component{
     this.state = {}
   }
   render() {
-    const { text } = this.props
+    const { text, click } = this.props
     return(
-      <button className="button">{text}</button>
+      <button className="button" onClick={click.bind(this)}>{text}</button>
     )
   }
 }

@@ -17,7 +17,7 @@ class homeView extends Component{
     return(
       <div className="contain">
         <h1>{pageTitle}</h1>
-       <LyButton text="改变标题"></LyButton>
+       <LyButton text="改变标题" click={this._changeTitle}></LyButton>
       </div>
     )
   }
